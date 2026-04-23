@@ -553,6 +553,9 @@ saveto(struct instance *insp, struct item *itp)
 				perror(itp->target);
 			}
 	}
+	free(buf);
+	close(wfd);
+	close(rfd);
 }
 
 
