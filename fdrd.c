@@ -590,6 +590,7 @@ read_config_file(const char *fpath, const struct stat *sb, int typeflag)
 	insp = malloc(sizeof(struct instance));
 	if (insp == NULL) {
 		perror("malloc");
+		fclose(f);
 		return 1;
 	}
 	insque(insp, &anchor);
@@ -714,6 +715,7 @@ read_config_file(const char *fpath, const struct stat *sb, int typeflag)
 			insp->ilast = itp;
 		}
 	}
+	fclose(f);
 	return 0;
 }
 
