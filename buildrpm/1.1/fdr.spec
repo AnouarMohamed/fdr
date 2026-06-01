@@ -5,7 +5,7 @@ Release:	1
 Summary:	Flight Data Recorder
 License:	UPL
 Source0:	%{name}-%{version}.tar.gz
-
+  
 %description
 The flight data recorder, a daemon which enables ftrace probes and harvests the data
 
